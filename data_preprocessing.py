@@ -22,7 +22,7 @@ for col in cat_cols:
 if 'sex' in df.columns:
     df['sex'] = df['sex'].replace({'Male': 1, 'Female': 0})
 
-# ✅ Convert heart disease label from 2 → 0 (No disease), 1 → 1 (Disease)
+# Convert heart disease label from 2 → 0 (No disease), 1 → 1 (Disease)
 if 'h17' in df.columns:
     df['h17'] = df['h17'].replace({2: 0})
 
@@ -30,5 +30,5 @@ if 'h17' in df.columns:
 df.to_csv("cleaned_npl2019.csv", index=False)
 
 # Show final info
-print("✅ Cleaned dataset saved as 'cleaned_npl2019.csv'")
-print("🎯 Heart disease distribution:\n", df['h17'].value_counts())
+print(" Cleaned dataset saved as 'cleaned_npl2019.csv'")
+print("Heart disease distribution:\n", df['h17'].value_counts())
